@@ -3,12 +3,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 
 //modules 
 
-import userRoutes from './routes/user.js';
+import userRoutes from './routes/users.js';
 import authRoutes from './routes/auths.js'
-import cookieParser from 'cookie-parser';
+import tweetRoutes from "./routes/tweets.js";
+
 
 const app = express();
 dotenv.config();
@@ -38,7 +40,7 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
-
+app.use("/api/tweets", tweetRoutes);
 
 
 // listen to reqs
