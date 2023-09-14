@@ -4,6 +4,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 //modules 
 
@@ -30,6 +31,12 @@ const connect = () => {
         throw err;
     });
 };
+
+app.use(cors({
+    origin: 'https://twitter-clone-mern-eight.vercel.app/', 
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, 
+  }));
 
 // include json
 app.use(cookieParser());
