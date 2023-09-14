@@ -12,7 +12,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 
-import app from "../../firebase";
+import app from "../../firebase.js";
 
 const EditProfile = ({ setOpen }) => {
   const { currentUser } = useSelector((state) => state.user);
