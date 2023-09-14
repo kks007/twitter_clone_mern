@@ -49,5 +49,5 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   },
-  "proxy": "http://localhost:4000/api"
+  "proxy": "https://tweety-backend.onrender.com/api"
 }
