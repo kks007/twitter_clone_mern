@@ -34,7 +34,7 @@ export const deleteUser = async (req, res, next) => {
   if (req.params.id === req.user.id) {
     try {
       await User.findByIdAndDelete(req.params.id);
-      await Tweet.remove({ userId: req.params.id });
+      await Tweet.deleteMany({ userId: req.params.id });
 
       res.status(200).json("User deleted");
     } catch (err) {
