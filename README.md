@@ -18,3 +18,5 @@
 ## Built With
 
 React.js, Node.js, Express.js, MongoDB. JWT for authentication. Tailwind Css for styling. Firebase for image upload.
+
+### Live api: https://tweety-backend.onrender.com

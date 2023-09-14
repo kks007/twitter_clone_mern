@@ -33,7 +33,7 @@ const connect = () => {
 };
 
 app.use(cors({
-    origin: 'https://twitter-clone-mern-eight.vercel.app/', 
+    origin: 'https://twitter-clone-mern-eight.vercel.app', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, 
   }));
