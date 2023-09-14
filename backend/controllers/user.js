@@ -36,7 +36,7 @@ export const deleteUser = async (req, res, next) => {
       await User.findByIdAndDelete(req.params.id);
       await Tweet.remove({ userId: req.params.id });
 
-      res.status(200).json("User delete");
+      res.status(200).json("User deleted");
     } catch (err) {
       next(err);
     }
@@ -47,9 +47,9 @@ export const deleteUser = async (req, res, next) => {
 
 export const follow = async (req, res, next) => {
   try {
-    //user
+    //get user by id
     const user = await User.findById(req.params.id);
-    //current user
+    //get current user by id
     const currentUser = await User.findById(req.body.id);
 
     if (!user.followers.includes(req.body.id)) {
