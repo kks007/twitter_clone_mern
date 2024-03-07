@@ -33,9 +33,7 @@ const connect = () => {
 };
 
 app.use(cors({
-    origin: 'https://tweety-backend.onrender.com', 
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, 
+    origin: 'https://melodyverse.netlify.app'
   }));
 
 // include json
